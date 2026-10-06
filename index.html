@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>INPOWAR</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menu">
+  <div class="brand">INPO<span>WAR</span></div>
+  <div class="subtitle">BATTLEFIELD // FRONTLINE</div>
+  <button id="start">دخول ساحة المعركة</button>
+  <button id="how">التحكم</button>
+  <div id="help">PC: WASD للحركة • Mouse للنظر • Click إطلاق • Shift ركض • R إعادة تلقيم<br>Mobile: عصا يسار للحركة • اسحب يمين الشاشة للنظر • FIRE للإطلاق</div>
+</div>
+<div id="hud" class="hidden">
+  <div class="top"><span>INPOWAR</span><span id="fps">-- FPS</span></div>
+  <div class="crosshair">+</div>
+  <div class="bottom"><span id="ammo">30 / 120</span><span id="status">READY</span></div>
+  <div id="mobile">
+    <div id="stick"><i></i></div><button id="fire">FIRE</button><button id="reload">↻</button>
+  </div>
+</div>
+<div id="loading">LOADING FRONTLINE...</div>
+<script type="module" src="game.js"></script>
+</body>
+</html>

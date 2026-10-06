@@ -98,7 +98,9 @@ function gunSound(){tone(95,.07,"sawtooth",.08);tone(520,.045,"square",.035)}
 function stepSound(){tone(75,.035,"triangle",.018)}
 function planeSound(){tone(55,.9,"sawtooth",.018)}
 
-document.querySelector("#start").onclick=()=>{startAudio();menu.classList.add("hidden");hud.classList.remove("hidden");started=true;controls.lock();};
+async function enterFullscreen(){try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen()}catch(e){}}
+document.querySelector("#fullscreen").onclick=()=>enterFullscreen();
+document.querySelector("#start").onclick=async()=>{startAudio();await enterFullscreen();menu.classList.add("hidden");hud.classList.remove("hidden");started=true;controls.lock();};
 document.querySelector("#how").onclick=()=>alert("WASD حركة | Mouse نظر | Click إطلاق | Shift ركض | R تلقيم | الهاتف: عصا للحركة + سحب يمين الشاشة للنظر");
 
 addEventListener("keydown",e=>{keys[e.code]=true;if(e.code==="KeyR")reload()});
